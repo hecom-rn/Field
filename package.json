@@ -1,0 +1,16 @@
+{
+  "name": "@hecom/field",
+  "version": "0.0.1",
+  "description": "Field Special Registry",
+  "main": "dist/index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:hecom/field.git"
+  },
+  "author": "Xiaosong Gao",
+  "license": "MIT",
+  "peerDependencies": {
+    "specials": "*"
+  }
+}
