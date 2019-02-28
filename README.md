@@ -28,6 +28,9 @@
 * `Process`：对字段的值处理成可展示的内容。
   * `state`：`{layout}`。
   * `params`：`{metaid, field, value}`。
+* `ProcessFilter`：对字段的值处理成筛选条件的值(Condition.right.value)。
+  * `state`：`{layout}`。
+  * `params`：`{field, value}`。
 * `Sortable`：字段是否可排序。
   * `state`：`{layout}`。
   * `params`：`{}`。

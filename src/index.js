@@ -6,6 +6,7 @@ const Display = 'display';
 const Edit = 'edit';
 const Filter = 'filter';
 const Process = 'process';
+const ProcessFilter = 'processFilter';
 const Sortable = 'sortable';
 const FilterCondition = 'filtercondition';
 const SearchCondition = 'searchcondition';
@@ -17,6 +18,7 @@ export default {
         edit: _register(Edit),
         filter: _register(Filter),
         process: _register(Process),
+        processFilter: _register(ProcessFilter),
         sortable: _register(Sortable),
         filterCondition: _register(FilterCondition),
         searchCondition: _register(SearchCondition),
@@ -27,6 +29,7 @@ export default {
         edit: _unregister(Edit),
         filter: _unregister(Filter),
         process: _unregister(Process),
+        processFilter: _unregister(ProcessFilter),
         sortable: _unregister(Sortable),
         filterCondition: _unregister(FilterCondition),
         searchCondition: _unregister(SearchCondition),
@@ -37,6 +40,7 @@ export default {
         edit: _match(Edit),
         filter: _match(Filter),
         process: _match(Process),
+        processFilter: _match(ProcessFilter),
         sortable: _match(Sortable),
         filterCondition: _match(FilterCondition),
         searchCondition: _match(SearchCondition),
@@ -66,7 +70,7 @@ function _register(action) {
                     return;
                 }
                 if (typeof value === 'function') {
-                    Specials.register(rootNode, [action ,type], undefined, value);
+                    Specials.register(rootNode, [action, type], undefined, value);
                 } else if (typeof value === 'object') {
                     Object.keys(value).forEach(subType => {
                         Specials.register(rootNode, [action, type, subType], undefined, value[subType]);
