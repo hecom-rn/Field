@@ -3,18 +3,25 @@
   "version": "1.0.1",
   "private": false,
   "description": "Field Special Registry",
-  "main": "src/index.js",
-  "scripts": {},
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "./node_modules/.bin/eslint . --ext .ts,.tsx"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/hecom-rn/Field.git"
   },
   "author": "Xiaosong Gao",
   "license": "MIT",
-  "peerDependencies": {
-    "specials": "*"
-  },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "eslint-plugin-automatic": "latest"
+  },
+  "dependencies": {
+    "@hecom/types": "^1.0.2",
+    "specials": "latest"
   }
 }
