@@ -9,14 +9,14 @@ import * as ProcessFilter from './processfilter';
 import * as Sortable from './sortable';
 
 export default {
-    ButtonCondition: wrapper(ButtonCondition),
-    Display: wrapper(Display),
-    Edit: wrapper(Edit),
-    Filter: wrapper(Filter),
-    FilterCondition: wrapper(FilterCondition),
-    Process: wrapper(Process),
-    ProcessFilter: wrapper(ProcessFilter),
-    Sortable: wrapper(Sortable),
+    ButtonCondition: wrapper(ButtonCondition.Instance),
+    Display: wrapper(Display.Instance),
+    Edit: wrapper(Edit.Instance),
+    Filter: wrapper(Filter.Instance),
+    FilterCondition: wrapper(FilterCondition.Instance),
+    Process: wrapper(Process.Instance),
+    ProcessFilter: wrapper(ProcessFilter.Instance),
+    Sortable: wrapper(Sortable.Instance),
 };
 
 export {
