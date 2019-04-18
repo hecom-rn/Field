@@ -3,6 +3,6 @@ module.exports = {
         "automatic",
     ],
     extends: [
-        "plugin:automatic/typescript",
+        "plugin:automatic/typescript-react-native",
     ],
 };
