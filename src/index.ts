@@ -1,4 +1,6 @@
 import wrapper from './util';
+import FieldType from './fieldtype';
+import FieldSubType from './fieldsubtype';
 import * as ButtonCondition from './buttoncondition';
 import * as Display from './display';
 import * as Edit from './edit';
@@ -10,6 +12,10 @@ import * as ProcessFilter from './processfilter';
 import * as Sortable from './sortable';
 
 export default {
+    // 常量部分
+    Type: FieldType,
+    SubType: FieldSubType,
+    // 注册部分
     ButtonCondition: wrapper(ButtonCondition.Instance),
     Display: wrapper(Display.Instance),
     Edit: wrapper(Edit.Instance),
