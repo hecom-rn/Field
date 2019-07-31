@@ -12,16 +12,17 @@ export default function<S, P, R>(instance: Specials.Instance<S, P, R>) {
         specific: function (
             metaName: string,
             fieldName: string,
-            handle: Specials.HandleFunc<P, R>
+            handle: Specials.HandleFunc<P, R>,
+            priority: number
         ): Specials.HandleId {
             const special = function (state: S) {
                 const {layout = {}} = state;
                 return layout.metaName === metaName && layout.name === fieldName;
             };
-            return instance.registerSpecial([], special, handle);
+            return instance.registerSpecial([], special, handle, priority);
         },
-        custom: function (special, handle) {
-            return instance.registerSpecial([], special, handle);
+        custom: function (special, handle, priority) {
+            return instance.registerSpecial([], special, handle, priority);
         },
         batch: function (fieldMap) {
             Object.keys(fieldMap).forEach((type) => {
