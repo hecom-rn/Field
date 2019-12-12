@@ -7,7 +7,7 @@
   "scripts": {
     "start": "tsc -w",
     "build": "tsc",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "patch": "npm version patch -m 'Bump version %s';git push origin master --tags",
     "minor": "npm version minor -m 'Bump version %s';git push origin master --tags"
   },
