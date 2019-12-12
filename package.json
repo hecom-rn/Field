@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "tsc -w",
-    "build": "tsc",
+    "build": "rm -rf ./dist; tsc",
     "test": "jest --passWithNoTests",
     "patch": "npm version patch -m 'Bump version %s';git push origin master --tags",
     "minor": "npm version minor -m 'Bump version %s';git push origin master --tags"

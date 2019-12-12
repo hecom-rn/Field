@@ -1,4 +1,5 @@
 import {State} from "./typings";
+import {Meta} from '@hecom/types';
 import {HandleFunc, HandleId, HandleResult, Instance, StateFunc} from "specials";
 
 export default function <S extends State, P, R>(instance: Instance<S, P, R>) {
@@ -12,8 +13,8 @@ export default function <S extends State, P, R>(instance: Instance<S, P, R>) {
                             fieldName: string,
                             handle: HandleFunc<P, R>,
                             priority: number): HandleId {
-            const special = function (state: S) {
-                const {layout = {}} = state;
+            const special = function (state?: S) {
+                const {layout = ({} as Meta.Field)} = state || {};
                 return layout.metaName === metaName && layout.name === fieldName;
             };
             return instance.registerSpecial([], special, handle, priority);
@@ -21,7 +22,7 @@ export default function <S extends State, P, R>(instance: Instance<S, P, R>) {
         custom: function (special: StateFunc<S>, handle: HandleFunc<P, R>, priority: number) {
             return instance.registerSpecial([], special, handle, priority);
         },
-        batch: function (fieldMap: object) {
+        batch: function (fieldMap: { [key: string]: any }) {
             Object.keys(fieldMap).forEach((type) => {
                 const value = fieldMap[type];
                 if (!value) {
