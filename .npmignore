@@ -3,3 +3,5 @@
 /__tests__
 jest.config.js
 yarn.lock
+.idea
+yarn-error.log
