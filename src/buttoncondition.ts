@@ -1,5 +1,5 @@
 import * as Specials from 'specials';
-import { Meta } from '@hecom/types';
+import {Meta} from '@hecom/types';
 import * as Types from './typings';
 
 export interface State extends Types.DataState {

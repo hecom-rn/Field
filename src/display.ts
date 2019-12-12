@@ -12,6 +12,6 @@ export interface Props extends Object {
     fieldname: string;
 }
 
-export type Result = React.ComponentElement<Props>;
+export type Result = React.ElementType<Props>;
 
 export const Instance = Specials.getInstance<State, Params, Result>();

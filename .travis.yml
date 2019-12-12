@@ -4,6 +4,8 @@ node_js:
 os:
  - linux
 
+cache: yarn
+
 stages:
  - test
  - name: deploy
@@ -13,9 +15,10 @@ jobs:
   include:
     - stage: test
     - stage: deploy
+      script: yarn run build
       deploy:
         provider: npm
-        email: gaoxiaosong06@gmail.com
+        email: summer88123@163.com
         api_key: "$NPM_TOKEN"
         on:
           tags: true

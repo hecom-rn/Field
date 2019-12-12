@@ -5,7 +5,9 @@
   "description": "Field Special Registry",
   "main": "src/index.ts",
   "scripts": {
-    "test": "./node_modules/.bin/eslint . --ext .ts,.tsx",
+    "start": "tsc -w",
+    "build": "tsc",
+    "test": "jest",
     "patch": "npm version patch -m 'Bump version %s';git push origin master --tags",
     "minor": "npm version minor -m 'Bump version %s';git push origin master --tags"
   },
@@ -19,12 +21,15 @@
     "access": "public"
   },
   "devDependencies": {
+    "@hecom/types": "^1.0.2",
+    "@types/jest": "^24.0.23",
     "@types/react": "latest",
-    "@types/react-native": "latest",
-    "eslint-plugin-automatic": "latest"
+    "eslint-plugin-automatic": "latest",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.3"
   },
   "dependencies": {
-    "@hecom/types": "^1.0.2",
     "specials": "latest"
   }
 }
