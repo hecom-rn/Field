@@ -10,6 +10,7 @@ import * as FilterCondition from './filtercondition';
 import * as Process from './process';
 import * as ProcessFilter from './processfilter';
 import * as Sortable from './sortable';
+import * as ConvertCheck from './convertCheck';
 
 export default {
     // 常量部分
@@ -17,6 +18,7 @@ export default {
     SubType: FieldSubType,
     // 注册部分
     ButtonCondition: wrapper(ButtonCondition.Instance),
+    ConvertCheck: wrapper(ConvertCheck.Instance),
     Display: wrapper(Display.Instance),
     Edit: wrapper(Edit.Instance),
     FieldStyle: wrapper(FieldStyle.Instance),
