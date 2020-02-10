@@ -19,7 +19,7 @@ jobs:
       deploy:
         provider: npm
         email: summer88123@163.com
-        api_key: "$NPM_TOKEN"
+        api_token: "$NPM_TOKEN"
         skip_cleanup: true
         on:
           tags: true
