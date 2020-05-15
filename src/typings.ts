@@ -6,7 +6,7 @@ export type Data = any;
 
 export interface State {
     layout: Layout;
-    others: Object;
+    others?: Object;
 }
 
 export interface DataState extends State {
@@ -16,5 +16,5 @@ export interface DataState extends State {
 export interface Params {
     layout: Layout;
     data: Data;
-    others: Object;
+    others?: Object;
 }
