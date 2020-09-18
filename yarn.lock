@@ -4349,7 +4349,7 @@ spdx-license-ids@^3.0.0:
   resolved "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.5.tgz#3694b5804567a458d3c8045842a6358632f62654"
   integrity sha512-J+FWzZoynJEXGphVIS+XEh3kFSjZX/1i9gFBaWQcB+/tmpe2qUsSBABpcxqxnAxFdiUFEgAX1bjYGQvIZmoz9Q==
 
-specials@latest:
+specials@^2.0.4:
   version "2.0.4"
   resolved "https://registry.npmjs.org/specials/-/specials-2.0.4.tgz#7bf645511091ac739ffb2dbea45972246b20327b"
   integrity sha512-OmU27wK7SUxAXJrVC29U8XjiGBmD/0oxemhzdgwRtPT3LwTo66GIUXqMZqYuyBp8/aiLqTTfaRLvECqdV48uRA==
