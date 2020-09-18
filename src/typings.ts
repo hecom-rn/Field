@@ -1,6 +1,6 @@
-import { Meta } from '@hecom/types';
+import {Meta} from '@hecom/types';
 
-export type Layout = Meta.Field;
+export type Layout = Meta.Field & { appName: string };
 
 export type Data = any;
 

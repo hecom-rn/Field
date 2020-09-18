@@ -27,9 +27,10 @@
     "eslint-plugin-automatic": "latest",
     "jest": "^24.9.0",
     "ts-jest": "^24.2.0",
-    "typescript": "^3.7.3"
+    "typescript": "^3.7.3",
+    "specials": "^2.0.4"
   },
-  "dependencies": {
+  "peerDependencies": {
     "specials": "latest"
   }
 }
