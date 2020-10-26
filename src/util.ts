@@ -7,7 +7,7 @@ export default function <S extends State, P, R>(instance: Instance<S, P, R>) {
         general: function (type: string,
                            subType: string,
                            handle: R | HandleFunc<P, R>): void {
-            return instance.registerDefault([type, subType], handle);
+            return instance.registerDefault(['std', type, subType], handle);
         },
         /**
          * 替换指定对象的指定字段的实现。通常用于固定的、内置的对象
