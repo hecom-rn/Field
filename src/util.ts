@@ -40,8 +40,25 @@ export default function <S extends State, P, R>(instance: Instance<S, P, R>) {
             }
             return instance.registerSpecial([appName], special as StateFunc<S>, handle, priority);
         },
+        /**
+         * 默认path为{@code ['std']}，主要为了保持历史代码的兼容性，新代码请优先使用{@link #customPath}
+         * @deprecated
+         * @param special - 匹配函数
+         * @param handle - 处理函数
+         * @param priority - 优先级
+         */
         custom: function (special: StateFunc<S>, handle: HandleFunc<P, R>, priority?: number) {
-            return instance.registerSpecial([], special, handle, priority);
+            return instance.registerSpecial(['std'], special, handle, priority);
+        },
+        /**
+         * 完全自定义指定字段注册
+         * @param path - 路径
+         * @param special - 匹配函数
+         * @param handle - 处理函数
+         * @param priority - 优先级
+         */
+        customPath: function (path: string[], special: StateFunc<S>, handle: HandleFunc<P, R>, priority?: number) {
+            return instance.registerSpecial(path, special, handle, priority);
         },
         batch: function (fieldMap: { [key: string]: any }) {
             Object.keys(fieldMap).forEach((type) => {
