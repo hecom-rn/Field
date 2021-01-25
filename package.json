@@ -1,6 +1,6 @@
 {
   "name": "@hecom/field",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "private": false,
   "description": "Field Special Registry",
   "main": "dist/index.js",
